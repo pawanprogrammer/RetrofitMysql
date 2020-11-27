@@ -1,5 +1,7 @@
 package com.trishasofttech.retrofitmysql;
 
+import com.google.gson.annotations.SerializedName;
+
 public class SignUpResponse {
 
     private String name;
@@ -25,4 +27,5 @@ public class SignUpResponse {
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
+
 }

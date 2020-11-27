@@ -44,11 +44,12 @@ Button btnsave;
                         user.getMobile()
                   );
                 //calling the api
-                call.enqueue(new Callback<SignUpResponse>() {
+                /*call.enqueue(new Callback<SignUpResponse>() {
                     @Override
                     public void onResponse(Call<SignUpResponse> call, Response<SignUpResponse> response) {
 
-                        Toast.makeText(RegisterActivity.this, "User register successfull", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this,"response.body().toString()",
+                                Toast.LENGTH_LONG).show();
                         //displaying the message from the response as toast
                         //Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_LONG).show();
                     }
@@ -59,6 +60,17 @@ Button btnsave;
                     }
 
 
+                });*/
+                call.enqueue(new retrofit2.Callback<SignUpResponse>() {
+                    @Override
+                    public void onResponse(Call<SignUpResponse> call, Response<SignUpResponse> response) {
+                        Toast.makeText(RegisterActivity.this, "fgbvdgl", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onFailure(Call<SignUpResponse> call, Throwable t) {
+
+                    }
                 });
             }
         });
